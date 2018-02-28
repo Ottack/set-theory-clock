@@ -8,7 +8,7 @@ import static com.paic.arch.interviews.support.BehaviouralTestEmbedder.aBehaviou
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Acceptance test class that uses the JBehave (Gerkin) syntax for writing stories.  
+ * Acceptance test class that uses the JBehave (Gerkin) syntax for writing stories.
  * You will notice the TimeConverter has no implementation ... (hint)
  */
 public class SetTheoryClockDevice {
@@ -18,6 +18,7 @@ public class SetTheoryClockDevice {
 
     @Test
     public void setTheoryClockAcceptanceTests() throws Exception {
+        setTheoryClock = new TimeConverterImp();
         aBehaviouralTestRunner()
                 .usingStepsFrom(this)
                 .withStory("set-theory-clock.story")
